@@ -1,5 +1,7 @@
 package com.nonso.databaserelationships.service.impl;
 
+import com.nonso.databaserelationships.onetomany.bi.Players;
+import com.nonso.databaserelationships.onetomany.bi.Registrations;
 import com.nonso.databaserelationships.onetoone.Player;
 import com.nonso.databaserelationships.onetoone.PlayerProfile;
 import com.nonso.databaserelationships.repository.PlayerRepository;
@@ -45,5 +47,11 @@ public class PlayerServiceImpl implements PlayerService {
         Player player = playerRepository.findById(id).get();
         player.setPlayerProfile(profile);
         return playerRepository.save(player);
+    }
+
+    @Override
+    public Players assignRegistration(int id, Registrations registration) {
+
+        return null;
     }
 }

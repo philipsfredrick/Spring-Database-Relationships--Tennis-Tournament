@@ -4,6 +4,7 @@ import com.nonso.databaserelationships.onetoone.Player;
 import com.nonso.databaserelationships.onetoone.PlayerProfile;
 import com.nonso.databaserelationships.service.PlayerProfileService;
 import com.nonso.databaserelationships.service.PlayerService;
+import com.nonso.databaserelationships.service.RegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,11 +14,9 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/api/v1/players")
 public class PlayerController {
-
     private final PlayerService playerService;
-
     private final PlayerProfileService profileService;
-
+    private final RegistrationService registrationService;
     //GET all players
     // GET player by id
     // POST add player
@@ -49,5 +48,10 @@ public class PlayerController {
         PlayerProfile profile = profileService.getPlayerProfile(profileId);
         System.out.println(profile);
         return playerService.assignProfile(id, profile);
+    }
+
+    @PutMapping("/{id}/registrations/{registration_id}")
+    public Player assignRegistration(@PathVariable("id") int id, @PathVariable("registration_id") int registerId) {
+       return null;
     }
 }

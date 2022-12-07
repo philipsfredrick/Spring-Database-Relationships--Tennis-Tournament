@@ -1,5 +1,6 @@
 package com.nonso.databaserelationships.onetomany.uni;
 
+import com.nonso.databaserelationships.onetomany.uni.Registration;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

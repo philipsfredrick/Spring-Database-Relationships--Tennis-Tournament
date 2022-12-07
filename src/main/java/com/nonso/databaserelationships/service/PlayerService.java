@@ -1,5 +1,7 @@
 package com.nonso.databaserelationships.service;
 
+import com.nonso.databaserelationships.onetomany.bi.Players;
+import com.nonso.databaserelationships.onetomany.bi.Registrations;
 import com.nonso.databaserelationships.onetoone.Player;
 import com.nonso.databaserelationships.onetoone.PlayerProfile;
 
@@ -13,4 +15,5 @@ public interface PlayerService {
     void deletePlayer(int id);
 
     Player assignProfile(int id, PlayerProfile profile);
+    Players assignRegistration(int id, Registrations registration);
 }
